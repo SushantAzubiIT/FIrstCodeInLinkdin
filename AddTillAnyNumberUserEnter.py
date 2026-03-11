@@ -1,4 +1,6 @@
 def addTillInfinity(*adder):
+    """This take input in Array adder since * is used in argument of function
+       Then it will add all those numbers"""
     total=0
     for i in adder:
         total= total+ i
