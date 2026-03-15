@@ -59,7 +59,45 @@ def tosortDeccendingorder(*t):
                 pass
     print(sort)
 
-tosortDeccendingorder(1,432,543,5,24,2,42,4,)
+# tosortDeccendingorder(1,432,543,5,24,2,42,4,)
+
+
+def decendingOrder(*t):
+    l=list(t)
+    tempLargest=l[0]
+    # n=len(l)-1
+    for i in range(len(l)):
+        for j in range(len(l)):
+            if l[i]<l[j]:
+                tempLargest=l[i]
+                l[i]=l[j]
+                l[j]=tempLargest
+    return l, l[len(l)-1]
+
+# l, a= decendingOrder(2,53,1,34,5,1,32,12)
+# print(l, "is a list arraged and largest number is", a)
+
+    
+# text= "sushant parajuli"
+# for i in text:
+#     print(i, end=" ")
+
+def toCheckIfItIsEmptyOrNot(l):
+    if not(l):
+        return "empty"
+    else:
+        return "not-empty"
+
+listt=[1,34,2,4,24]
+blah=[]
+
+tuplee=()
+dictt={}
+
+print(toCheckIfItIsEmptyOrNot(tuplee))
+print(toCheckIfItIsEmptyOrNot(dictt))
+print(toCheckIfItIsEmptyOrNot(blah))
+print(toCheckIfItIsEmptyOrNot(listt))
 
 
 
