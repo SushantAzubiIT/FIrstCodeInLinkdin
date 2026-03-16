@@ -94,11 +94,47 @@ blah=[]
 tuplee=()
 dictt={}
 
-print(toCheckIfItIsEmptyOrNot(tuplee))
-print(toCheckIfItIsEmptyOrNot(dictt))
-print(toCheckIfItIsEmptyOrNot(blah))
-print(toCheckIfItIsEmptyOrNot(listt))
+# print(toCheckIfItIsEmptyOrNot(tuplee))
+# print(toCheckIfItIsEmptyOrNot(dictt))
+# print(toCheckIfItIsEmptyOrNot(blah))
+# print(toCheckIfItIsEmptyOrNot(listt))
 
+a= "aaabacadaeafag"
+b= a.split("a")
+# print(b)
+
+def anymorestudents():
+    if anyMoreStudents.lower()== "no":
+        return my_dict
+    elif anyMoreStudents.upper()== "yes":
+        continue
+    else:
+        print("sorry you might have made mistake in spelling or extra space pls enter yes/no OR Yes/No only")
+
+
+
+# The program to enter a id of a student then entering marks of students and later calulating his/her average marks
+def StudentMarksEntry():
+    my_dict= {}
+    while True:
+        id=input("enter a student id")
+        marks=input("enter a list of students marks seprated by single space")
+        anyMoreStudents=input("enter No to quite and enter yes to continue ")
+        if id in my_dict:
+            print(12,"id is alrdy there", "so error")
+        else:
+            marksList=marks.split("")
+            my_dict[id]= marksList
+        if anyMoreStudents.lower()== "no":
+            return my_dict
+        elif anyMoreStudents.upper()== "yes":
+            continue
+        else:
+            print("sorry you might have made mistake in spelling or extra space pls enter yes/no OR Yes/No only")
+            anyMoreStudents=input("is there any more students? This time if you enter yes we will continue else break")
+
+
+        
 
 
     
