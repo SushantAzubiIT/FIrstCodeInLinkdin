@@ -104,12 +104,16 @@ b= a.split("a")
 # print(b)
 
 def anymorestudents():
+    anyMoreStudents=input("enter No to quite and enter yes to continue ")
+
     if anyMoreStudents.lower()== "no":
-        return my_dict
-    elif anyMoreStudents.upper()== "yes":
-        continue
+        return "userBecomsSmartisNo"
+    elif anyMoreStudents.lower()== "yes":
+        return "userBecomesSmartisYes"
     else:
         print("sorry you might have made mistake in spelling or extra space pls enter yes/no OR Yes/No only")
+        return "userIsDumb"
+
 
 
 
@@ -119,19 +123,31 @@ def StudentMarksEntry():
     while True:
         id=input("enter a student id")
         marks=input("enter a list of students marks seprated by single space")
-        anyMoreStudents=input("enter No to quite and enter yes to continue ")
         if id in my_dict:
-            print(12,"id is alrdy there", "so error")
+            print(id ,"id is alrdy there", "so error")
         else:
-            marksList=marks.split("")
+            marksList=marks.split()
             my_dict[id]= marksList
-        if anyMoreStudents.lower()== "no":
+        a=anymorestudents()
+        while a=="userIsDumb":
+            a=anymorestudents()
+
+        if a=="userBecomsSmartisNo":
             return my_dict
-        elif anyMoreStudents.upper()== "yes":
-            continue
-        else:
-            print("sorry you might have made mistake in spelling or extra space pls enter yes/no OR Yes/No only")
-            anyMoreStudents=input("is there any more students? This time if you enter yes we will continue else break")
+    
+datas=StudentMarksEntry()
+def toUseDataAndCalculate():
+    my_dict={}
+    for i in datas:
+        sum(i)
+        my_dict[i]=sum(i)
+    return my_dict
+
+
+        
+        
+
+
 
 
         
