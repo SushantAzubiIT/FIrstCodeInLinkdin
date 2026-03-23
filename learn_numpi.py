@@ -1,52 +1,80 @@
 import numpy as np
-result=np.random.permutation(np.arange(10))
-# print(result)
+def allRandomTasks():
+    result=np.random.permutation(np.arange(10))
+    # print(result)
 
-a=np.random.rand(1000);
-# print(a)
+    a=np.random.rand(1000);
+    # print(a)
 
-import matplotlib.pyplot as plt
-plt.hist(a, bins=100)
-# plt.show()
+    import matplotlib.pyplot as plt
+    plt.hist(a, bins=100)
+    # plt.show()
 
 
-b=np.random.rand(100000)
-plt.hist(b,bins=200)
+    b=np.random.rand(100000)
+    plt.hist(b,bins=200)
 
-# plt.show()
+    # plt.show()
 
-c=np.random.rand(2,3)
-# print(c)
+    c=np.random.rand(2,3)
+    # print(c)
 
-d=np.random.rand(1,2,3,4)
-# print(d)
-# print(d.ndim)
+    d=np.random.rand(1,2,3,4)
+    # print(d)
+    # print(d.ndim)
 
-reshaper= np.arange(100).reshape(4,25)
-# print(reshaper)
+    reshaper= np.arange(100).reshape(4,25)
+    # print(reshaper)
 
-normal_list=[1,2,42,12,24,65]
-sliced=normal_list[2:5]
-print(sliced)
+    normal_list=[1,2,42,12,24,65]
+    sliced=normal_list[2:5]
+    print(sliced)
 
-sliced[0]=4567
-print(sliced)
-print(normal_list)
+    sliced[0]=4567
+    print(sliced)
+    print(normal_list)
 
-# now trying with array of np
-test_array=np.array(normal_list)
-print(test_array)
-test_newarray=test_array[2:5]
-print(test_newarray)
-test_newarray[0]=2
-print(test_newarray)
-print(test_array)  #unlike in list this numpy array sliced through in pointing towards same memory location its not copying if we really wanna copy we have to use copy()method
+    # now trying with array of np
+    test_array=np.array(normal_list)
+    print(test_array)
+    test_newarray=test_array[2:5]
+    print(test_newarray)
+    test_newarray[0]=2
+    print(test_newarray)
+    print(test_array)  #unlike in list this numpy array sliced through in pointing towards same memory location its not copying if we really wanna copy we have to use copy()method
 
-idx=np.argwhere(test_array==12)[0][0]
-print(idx)
+    idx=np.argwhere(test_array==12)[0][0]
+    print(idx)
 
-c2= np.round(np.random.rand(3,5)*10)
-print(c2)
+    c2= np.round(np.random.rand(3,5)*10)
+    print(c2)
 
-print(c2[0,2])
-print(c2[0][2])
+    print(c2[0,2])
+    print(c2[0][2])
+
+def Task2(value):
+    #practice more numpy
+    arr1=np.array([1,3,4]) 
+    print([x for x in arr1])
+    print(arr1.dtype)
+    print(type(arr1))
+    print(arr1.ndim)
+    def secondaryFunction():
+        arr2=np.array([[[2,1,4,7,9],
+               [2,3,2,4,7],
+               [23,12,34,4,1]],
+
+              [[7,13,43,4,21],
+               [23,42,12,23,4],
+               [23,23,44,2,3]]])
+        
+        print(arr2[0,1,2])
+
+
+
+
+    if value=="yes":
+        secondaryFunction()
+
+
+Task2("yes")
